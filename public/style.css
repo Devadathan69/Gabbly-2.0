@@ -137,27 +137,31 @@ video {
 }
 
 #nextBtn {
-    background: var(--accent-1);
-    color: #000;
-    border: none;
-    padding: 15px 50px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 12px 35px;
     font-family: var(--font-body);
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 700;
     text-transform: uppercase;
-    border-radius: 30px;
+    border-radius: 50px;
     cursor: pointer;
-    box-shadow: 0 0 20px rgba(255, 42, 109, 0.4);
-    transition: transform 0.2s, box-shadow 0.2s;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: none;
+    transition: all 0.2s ease;
 }
 
 #nextBtn:hover {
+    background: rgba(255, 255, 255, 0.25);
     transform: scale(1.05);
-    box-shadow: 0 0 30px rgba(255, 42, 109, 0.6);
+    border-color: rgba(255, 255, 255, 0.4);
 }
 
 #nextBtn:active {
     transform: scale(0.95);
+    background: rgba(255, 255, 255, 0.05);
 }
 
 /* Landing Overlay */
@@ -245,9 +249,11 @@ video {
 
     #nextBtn {
         width: 100%;
-        padding: 18px;
-        font-size: 18px;
-        box-shadow: 0 4px 20px rgba(255, 42, 109, 0.5);
+        padding: 15px;
+        font-size: 16px;
+        box-shadow: none;
+        background: rgba(255, 255, 255, 0.15);
+        /* Slightly more visible on mobile */
     }
 
     .modal {
