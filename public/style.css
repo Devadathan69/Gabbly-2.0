@@ -226,6 +226,40 @@ video {
     cursor: not-allowed;
 }
 
+/* Mobile Responsiveness (PiP Layout) */
+@media (max-width: 768px) {
+    .video-wrapper:nth-child(1) {
+        top: 20px;
+        right: 20px;
+        width: 100px;
+        height: 133px;
+        /* Portrait aspect */
+        border-radius: 8px;
+    }
+
+    .controls {
+        bottom: 15%;
+        /* Move button up */
+        padding: 0 20px;
+    }
+
+    #nextBtn {
+        width: 100%;
+        padding: 18px;
+        font-size: 18px;
+        box-shadow: 0 4px 20px rgba(255, 42, 109, 0.5);
+    }
+
+    .modal {
+        width: 85%;
+        padding: 25px;
+    }
+
+    .modal h2 {
+        font-size: 1.8rem;
+    }
+}
+
 /* Desktop Handling for PiP positioning */
 @media (min-width: 769px) {
     .video-wrapper:nth-child(1) {
