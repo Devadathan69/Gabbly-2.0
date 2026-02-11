@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gabbly 2.0</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="landingOverlay" class="overlay">
+        <div class="modal">
+            <h2>Welcome to Gabbly 2.0</h2>
+            <p>Please confirm the following to continue:</p>
+            <label class="agreement">
+                <input type="checkbox" id="termsCheckbox">
+                <span>I am 18+ years old and I acknowledge that the developer is not responsible for any content or
+                    interactions on this platform.</span>
+            </label>
+            <button id="enterBtn" disabled>Enter Chat</button>
+        </div>
+    </div>
+
+    <div class="container" style="display: none;" id="mainContainer">
+        <h1>Gabbly 2.0</h1>
+
+        <div class="video-container">
+            <div class="video-wrapper">
+                <h3>You</h3>
+                <video id="localVideo" autoplay playsinline muted></video>
+            </div>
+            <div class="video-wrapper">
+                <h3>Stranger</h3>
+                <video id="remoteVideo" autoplay playsinline></video>
+                <div id="statusMessage">Waiting for a stranger...</div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button id="nextBtn">Next</button>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="client.js"></script>
+</body>
+
+</html>
